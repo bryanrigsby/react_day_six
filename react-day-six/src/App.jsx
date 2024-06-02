@@ -5,7 +5,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Home from './pages/Home';
-import ErrorPage from './pages/ErrorPage';
+// import ErrorPage from './pages/ErrorPage';
 import Pokemon from './pages/Pokemon';
 import Wiki from './pages/Wiki';
 import Layout from './components/Layout';
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
   {
     path: "/home",
     element: <Layout />,
-    errorElement: <ErrorPage />,
+    // errorElement: <ErrorPage />,
     children: [
       { path: "", element: <Home /> },
       { path: "pokemon/:pokemonID", element: <Pokemon /> },
@@ -23,9 +23,10 @@ const router = createBrowserRouter([
     ]
   },
   {
-    path: "/",
+    path: "/signin",
     element: <SignIn /> 
-  }
+  },
+
 ]);
 
 function App() {

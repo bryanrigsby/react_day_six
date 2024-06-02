@@ -7,7 +7,10 @@ export default function Pokemon() {
   const { pokemonID } = useParams();
 
   // Use '===' for strict equality check
-  const pokemonDetails = pokemonData && pokemonData.length > 0 ? pokemonData.find(f => f.id === Number(pokemonID)) : null;
+  const pokemonDetails = pokemonData && pokemonData.length > 0 ? 
+  pokemonData.find(f => f.id === Number(pokemonID)) : null;
+
+
 
   return (
     <>
