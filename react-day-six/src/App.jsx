@@ -5,22 +5,28 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Home from './pages/Home';
-// import ErrorPage from './pages/ErrorPage';
+import ErrorPage from './pages/ErrorPage';
 import Pokemon from './pages/Pokemon';
 import Wiki from './pages/Wiki';
 import Layout from './components/Layout';
 import SignIn from './pages/SignIn';
 
 const router = createBrowserRouter([
+  // {
+  //   path: "/home",
+  //   element: <Layout />,
+  //   // errorElement: <ErrorPage />,
+  //   children: [
+  //     { path: "", element: <Home /> },
+  //     { path: "pokemon/:pokemonID", element: <Pokemon /> },
+  //     { path: "wiki", element: <Wiki /> },
+  //   ]
+  // },
+  
   {
-    path: "/home",
-    element: <Layout />,
-    // errorElement: <ErrorPage />,
-    children: [
-      { path: "", element: <Home /> },
-      { path: "pokemon/:pokemonID", element: <Pokemon /> },
-      { path: "wiki", element: <Wiki /> },
-    ]
+    path: "/",
+    element: <Home />,
+    errorElement: <ErrorPage /> 
   },
   {
     path: "/signin",
