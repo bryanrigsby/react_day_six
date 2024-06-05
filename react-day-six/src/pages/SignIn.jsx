@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './SignIn.css'; 
-import { GiTacos } from "react-icons/gi";
 
 const SignIn = () => {
   const navigate = useNavigate()
@@ -36,7 +35,7 @@ const SignIn = () => {
   
   return (
     <div className="sign-in-container">
-      <h2>Sign In<GiTacos color={'black'} /></h2>
+      <h2>Sign In</h2>
       <input 
         type="text" 
         value={userName} 
